@@ -78,6 +78,7 @@ class EntityTree(object):
             self._group_nodes_need_updating = False
     
     def resource_did_instantiate(self, resource):
+        print('FIXME: resource_did_instantiate: ' + resource.url)
         self._refresh_group_nodes()
     
     def on_right_click(self, event, node_view):
