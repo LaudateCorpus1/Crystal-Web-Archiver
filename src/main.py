@@ -51,6 +51,11 @@ def main(args):
     # Start GUI subsystem
     import wx
     
+    # FIXME: Enable REPL
+    import code
+    import threading
+    threading.Thread(target=code.interact).start()
+    
     # Run GUI
     class MyApp(wx.App):
         def __init__(self, *args, **kwargs):
